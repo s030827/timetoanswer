@@ -17,14 +17,17 @@ group :development do
   gem 'better_errors'
   gem 'listen'
   gem 'spring'
+  gem 'spring-commands-rspec'
   gem 'spring-watcher-listen'
   gem 'web-console'
 end
 
 group :development, :test do
   gem 'byebug'
+  gem 'capybara'
   gem 'hirb'
   gem 'hirb-unicode-steakknife', require: 'hirb-unicode'
   gem 'pry-byebug'
   gem 'pry-stack_explorer'
+  gem 'rspec-rails'
 end
