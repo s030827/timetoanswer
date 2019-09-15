@@ -25,6 +25,7 @@ end
 group :development, :test do
   gem 'byebug'
   gem 'capybara'
+  gem 'factory_bot_rails'
   gem 'hirb'
   gem 'hirb-unicode-steakknife', require: 'hirb-unicode'
   gem 'pry-byebug'
