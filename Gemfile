@@ -18,9 +18,10 @@ group :development do
   gem 'awesome_rails_console'
   gem 'better_errors'
   gem 'listen'
-  gem 'spring'
   gem 'spring-commands-rspec'
   gem 'spring-watcher-listen'
+  gem 'spring'
+  gem 'tty-spinner'
   gem 'web-console'
 end
 
