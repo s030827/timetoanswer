@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe ProfilesBackoffice::WelcomeController, type: :controller do
+RSpec.describe UsersBackoffice::WelcomeController, type: :controller do
 
   describe "GET #index" do
     it "returns http success" do
