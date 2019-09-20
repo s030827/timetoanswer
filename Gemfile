@@ -17,6 +17,7 @@ gem 'webpacker'
 group :development do
   gem 'awesome_rails_console'
   gem 'better_errors'
+  gem 'faker'
   gem 'listen'
   gem 'spring-commands-rspec'
   gem 'spring-watcher-listen'
