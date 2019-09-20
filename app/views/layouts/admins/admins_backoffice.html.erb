@@ -10,7 +10,16 @@
   </head>
 
   <body>
-    <h4>Layout Admins</h4>
-    <%= yield %>
+    <%= render partial: 'layouts/admins/shared/navbar' %>
+
+    <div class="columns">
+      <div class="column is-one-quarter has-background-grey-light">
+        <%= render partial: 'layouts/admins/shared/sidebar' %>
+      </div>
+      <div class="column">
+        <%= yield %>
+      </div>
+    </div>
+
   </body>
 </html>
