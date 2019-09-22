@@ -22,11 +22,15 @@
         <th><%= admin.id %></th>
         <td><%= admin.email %></td>
         <td class="is-flex-widescreen ">
+
+          <%= link_to edit_admins_backoffice_admin_path(admin) do %>
+            <span class="icon">
+              <i class="fas fa-user-edit"></i>
+            </span>
+          <% end %>
+
           <span class="icon">
             <i class="fas fa-user-minus"></i>
-          </span>
-          <span class="icon">
-            <i class="fas fa-user-edit"></i>
           </span>
         </td>
       </tr>
