@@ -1,2 +1,35 @@
 <h1>Admins</h1>
 <p>Find me in app/views/admins_backoffice/admins/index.html.erb</p>
+
+<table class="table is-striped is-narrow is-hoverable is-fullwidth">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>E-mail</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <th>Id</th>
+      <th>E-mail</th>
+      <th></th>
+    </tr>
+  </tfoot>
+  <tbody>
+    <% @admins.each do |admin| %>
+      <tr>
+        <th><%= admin.id %></th>
+        <td><%= admin.email %></td>
+        <td class="is-flex-widescreen ">
+          <span class="icon">
+            <i class="fas fa-user-minus"></i>
+          </span>
+          <span class="icon">
+            <i class="fas fa-user-edit"></i>
+          </span>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
