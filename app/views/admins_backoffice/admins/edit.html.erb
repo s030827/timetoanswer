@@ -1,8 +1,17 @@
-<h1>Edit administrator</h1>
-<p><%= @admin.inspect %></p>
-
 <%= form_with(model: [ :admins_backoffice, @admin ], local: true) do |form| %>
   <div class="field container">
+
+    <% if @admin.errors.any? %>
+      <div class="notification is-danger">
+        <button class="delete"></button>
+        <ul>
+          <% @admin.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
     <div class="field">
       <%= form.label :email, class: "label" %>
       <div class="control">
@@ -29,3 +38,14 @@
     </div>
   </div>
 <% end %>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
+      $notification = $delete.parentNode;
+      $delete.addEventListener('click', () => {
+        $notification.parentNode.removeChild($notification);
+      });
+    });
+  });
+</script>
